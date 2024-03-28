@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Aidil</title>
+    <link rel="icon" type="image/x-icon" href="/images/calculator.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 id="name">MY CALCULATOR</h3>
+        <div class="display">
+            <input id="screen" type="text" placeholder="0">
+        </div>
+        <div class="btns">
+            <div class="row">
+                <button id="ce" onclick="backspc()">⌫</button>
+                <button id="z" class="btn">(</button>
+                <button id="x" class="btn">)</button>
+                <button id="per" class="btn">%</button>
+                <button id="ac" onclick="screen.value=''">AC</button>
+            </div>
+
+            <div class="row">
+                <button id="o" onclick="fact()">x!</button>
+                <button id="p" onclick="pi()">π</button>
+                <button id="log" onclick="log()">log</button>
+                <button id="q" onclick="sqrt()">√</button>
+                <button id="r" onclick="pow()">x^<span style="position: relative; bottom: .4em; right: .1em;"></span></button>
+            </div>
+
+            <div class="row">
+                <button id="sin" onclick="sin()">sin</button>
+                <button id="a" class="btn">7</button>
+                <button id="b" class="btn">8</button>
+                <button id="c" class="btn">9</button>
+                <button id="bag" class="btn">÷</button>
+            </div>
+
+            <div class="row">
+                <button id="cos" onclick="cos()">cos</button>
+                <button id="d" class="btn">4</button>
+                <button id="e" class="btn">5</button>
+                <button id="f" class="btn">6</button>
+                <button id="kal" class="btn">*</button>
+            </div>
+
+            <div class="row">
+                <button id="tan" onclick="tan()">tan</button>
+                <button id="g" class="btn">1</button>
+                <button id="h" class="btn">2</button>
+                <button id="i" class="btn">3</button>
+                <button id="kur" class="btn">-</button>
+            </div>
+
+            <div class="row">
+                <button id="ee" onclick="e()">e</button>
+                <button id="j" class="btn">0</button>
+                <button class="btn">.</button>
+                <button id="eval" onclick="screen.value=eval(screen.value.replaceAll('%','* 0.01'))">=</button>
+                <button id="tam" class="btn">+</button>
+            </div>
+    </div>
+    <div id="layoutAuthentication_footer">
+    <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between small">
+        <div class="text-muted">Copyright &copy; Aplikasi Kalkulator Aidil</div>
+        </div>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
